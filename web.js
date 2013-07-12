@@ -6,7 +6,8 @@ app.get('/', function(request, response) {
     var fs = require('fs');
     var text = fs.readFileSync('index.html');
 
-    console.log(text);
+    response.send(text);
+response.send('test');
 
     fs.readFile('index.html', function (err, data) {
        if (err) { console.log('error'); throw err;}
