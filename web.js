@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
     var text = fs.readFileSync('index.html');
 
     response.send(text);
-response.send('test');
+    response.send('test');
 
     fs.readFile('index.html', function (err, data) {
        if (err) { console.log('error'); throw err;}
@@ -19,7 +19,7 @@ response.send('test');
 response.send('passed 3');
     });
     
-    response.send('Hello World 3!');
+    //response.send('Hello World 3!');
 });
 
 var port = process.env.PORT || 5000;
