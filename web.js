@@ -8,19 +8,6 @@ app.get('/', function(request, response) {
     var bf = new Buffer(text);
 
     response.send(bf.toString());
-    response.send('test');
-
-    fs.readFile('index.html', function (err, data) {
-       if (err) { console.log('error'); throw err;}
-       response.send('passed 1');
-
-       var buffer = new Buffer(data);
-       response.send('passed 2');
-       response.send(data.toString());
-response.send('passed 3');
-    });
-    
-    //response.send('Hello World 3!');
 });
 
 var port = process.env.PORT || 5000;
