@@ -4,6 +4,10 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
     var fs = require('fs');
+    var text = fs.readFileSync('index.html');
+
+    console.log(text);
+
     fs.readFile('index.html', function (err, data) {
        if (err) { console.log('error'); throw err;}
        response.send('passed 1');
